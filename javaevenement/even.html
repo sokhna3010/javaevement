@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<div id="container" style="margin-left: 400px; margin-top: 100px;">
+		
+		<div id="rec" style="background-color: burlywood; width: 50px; height: 70px;margin-left: 200px; " ></div> <br> <br>
+
+		<button type="bouton" id="hauteur" onclick="hauteur()">Hauteur</button>
+		<button type="bouton" id="Couleurvert" onclick="vert()">Couleur vert</button>
+		<button type="bouton" id="couleurinitial" onclick="initial()">Couleur initial</button>
+		<button type="bouton" id="disparaitre" onclick="disparaitre()">Disparaitre</button>
+		<button type="bouton" id="reaparaitre" onclick="reaparaitre()">Réaparaitre</button>
+
+		<button type="bouton" id="Diminuer" onclick="Diminuer()">Diminuer</button>
+		<button type="bouton" id="largeur" onclick="largeur()">largeur</button>
+
+
+</div>
+<script>
+
+function vert() {
+	document.getElementById('rec').style.backgroundColor="green";
+}
+function initial() {
+	document.getElementById("rec").style.backgroundColor="burlywood";
+}
+function disparaitre() {
+	document.getElementById("rec").style.backgroundColor="";
+}
+
+function reaparaitre() {
+	document.getElementById("rec").style.backgroundColor="burlywood";
+}
+
+function hauteur(){
+	
+
+	if (document.getElementById("rec").clientHeight==100) {
+			alert("vs avez at");
+	}
+	else{document.getElementById("rec").style.height=(document.getElementById("rec").clientHeight+10) + "px";
+
+	}
+}
+
+
+function Diminuer(){
+	// document.getElementById("rec").style.height=(document.getElementById("rec").clientHeight - 10) + "px"; c le meme k le else
+
+		if(document.getElementById("rec").clientHeight== 70){
+			alert("vous avez atteind la taille initial");
+			  }
+			else{document.getElementById("rec").style.height=(document.getElementById("rec").clientHeight-10) + "px";
+				
+			}
+
+
+}
+
+function largeur(){
+	document.getElementById("rec").style.width=(document.getElementById("rec").clientWidth+10) + "px";
+}
+
+
+
+</script>
+
+</body>
+</html>
+
